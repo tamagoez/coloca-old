@@ -1,2 +1,2 @@
 # Coloca for Web
-Coloca is your space
+Coloca is your space to communicate, manage task, concentrate your job and so on...
