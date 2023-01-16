@@ -1,9 +1,6 @@
 import jatranslate from "../translate/ja/auth.json";
-import entranslate from "../translate/en/auth.json";
-import { getLocalBDB } from "../utils/browserdb";
 import Link from "next/link";
 let trtext = jatranslate;
-// Function("trtext = " + getLocalBDB("lang") + "translate");
 
 export function LoginComponent({
   email,
