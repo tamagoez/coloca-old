@@ -3,9 +3,9 @@ import { toast } from "react-toastify";
 export function errortoast(message: string) {
   console.error(message);
   toast.error(message, {
-    position: "top-left",
+    position: "top-right",
     autoClose: 5000,
-    hideProgressBar: true,
+    hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
     draggable: true,
