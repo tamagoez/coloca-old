@@ -3,9 +3,22 @@ import { errortoast } from "../../utils/toast";
 
 export async function signInWithEmail(email: string, password: string) {
   try {
-    const { data, error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signInWithPassword({
       email: email,
       password: password,
+    });
+    if (error) throw error;
+  } catch (error: any) {
+    // errortoast(error.message);
+    throw new Error(error.message);
+  }
+}
+export async function signUpWithEmail(email: string, password: string) {
+  
+  try {
+    const { data, error } = await supabase.auth.signUp({
+      email: "example@email.com",
+      password: "example-password",
     });
     if (error) throw error;
   } catch (error: any) {
