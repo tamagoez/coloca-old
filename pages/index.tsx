@@ -24,7 +24,7 @@ const IndexPage = () => (
         <p style={{ fontSize: "20px" }}>
           Now developing!!
           <br />
-          First release will be at Jan 20th.
+          First release will be at Feb 20th.
           <br />
           See you soon!
         </p>

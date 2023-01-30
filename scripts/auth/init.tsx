@@ -10,7 +10,7 @@ export async function initUserOnce() {
     const handleid = userid.replace(/-/g, "");
     const metadata = user.user_metadata;
     const { data, error } = await supabase
-      .from("countries")
+      .from("profiles")
       .insert({
         uuid: userid,
         name: metadata.name ?? "Guest",
