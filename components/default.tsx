@@ -38,7 +38,7 @@ function toaster(pending: string, process) {
     },
     success: {
       render({ data }) {
-        return `Succeed!: ${data}`;
+        return `Succeed!`;
       },
     },
   });
