@@ -23,6 +23,7 @@ export async function initUserOnce() {
     await setUserMetaData(data.intid);
     if (error) throw error;
   } catch (error) {
+    console.error(error);
     defaultErrorToast("プロフィールの初期設定でエラーが発生しました");
   }
 }
