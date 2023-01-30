@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
         defaultInfoToast("ログアウトしました");
       }
     });
-  }, [session]);
+  }, []);
   return (
     <SessionContextProvider
       supabaseClient={supabase}
