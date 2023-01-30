@@ -28,6 +28,8 @@ const IndexPage = () => (
           <br />
           See you soon!
         </p>
+        <Link href="/login">それでもいいからログインしたい人はこちら</Link>
+        <Link href="/logout">とっととログアウトしたい人はこちら</Link>
       </div>
     </div>
   </main>
