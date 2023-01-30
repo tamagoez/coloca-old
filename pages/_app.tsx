@@ -8,6 +8,21 @@ import { initUserOnce } from "../scripts/auth/init";
 
 function MyApp({ Component, pageProps }) {
   const [supabase] = useState(() => createBrowserSupabaseClient());
+  const [session, setSession] = useState(null);
+  useEffect(() => {
+    setSession(supabase.auth.getSession());
+    supabase.auth.onAuthStateChange((event, session) => {
+      if (event == "SIGNED_IN") {
+        initUserOnce();
+        console.log("SIGNED_IN", session);
+        defaultInfoToast(`${session.user.email} でログインしています`);
+      }
+      if (event == "SIGNED_OUT") {
+        console.log("SIGNED_OUT", session);
+        defaultInfoToast("ログアウトしました");
+      }
+    });
+  }, [session]);
   return (
     <SessionContextProvider
       supabaseClient={supabase}
