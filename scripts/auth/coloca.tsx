@@ -42,3 +42,7 @@ export async function signInWithDiscord() {
   });
   if (error) throw new Error(error.message);
 }
+
+export async function signOut() {
+  await supabase.auth.signOut();
+}
